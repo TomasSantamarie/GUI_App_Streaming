@@ -67,6 +67,7 @@
                     android:id="@+id/textView8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
                     android:text="correo/contraseña"
                     android:textColor="@color/black"
                     android:textSize="34sp" />
@@ -83,12 +84,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginBottom="5dp">
+                    android:layout_marginBottom="30dp">
 
                     <RadioButton
                         android:id="@+id/botonCorreo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/blue"
                         android:text="Correo"
                         android:textColorHighlight="@color/blue" />
 
@@ -96,6 +98,7 @@
                         android:id="@+id/botonMensaje"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/blue"
                         android:text="Mensaje de texto (SMS)" />
                 </RadioGroup>
 
@@ -117,7 +120,7 @@
                     android:id="@+id/escribirCorreo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="30dp"
                     android:layout_marginBottom="30dp"
                     android:background="@color/white"
                     android:orientation="horizontal">
@@ -137,7 +140,7 @@
                     android:id="@+id/escribirtelefono"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="30dp"
                     android:layout_marginBottom="30dp"
                     android:orientation="horizontal">
 
@@ -213,6 +216,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
                     android:text="La información recopilada por Google reCAPTCHAstá sujeta a la Política de Privacidad y las Condiciones de servicio de Google, y se utiliza para proporcionar, mantener y mejorar el servicio de reCAPTCHA, así como para fines generales de seguridad (Google no la utiliza para publicidad personalizada)." />
 
             </LinearLayout>

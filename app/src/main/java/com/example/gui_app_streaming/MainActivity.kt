@@ -4,6 +4,9 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.view.isGone
+import androidx.core.view.isInvisible
+import androidx.core.view.isVisible
 import com.example.gui_app_streaming.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -17,6 +20,8 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         var pulsado = false
+        binding.informacion.isGone=false
+        binding.texto.isInvisible = true
 
         binding.recordar.setOnClickListener {
             if (pulsado) {
@@ -28,6 +33,14 @@ class MainActivity : AppCompatActivity() {
         binding.ayuda.setOnClickListener {
             val intent = Intent(this, Informacion::class.java)
             startActivity(intent)
+        }
+
+        binding.informacion.setOnClickListener{
+            binding.informacion.isGone= true
+            binding.texto.isVisible = true
+        }
+        binding.subscribirse.setOnClickListener{
+
         }
     }
 }

@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.view.isGone
+import androidx.core.view.isInvisible
+import androidx.core.view.isVisible
 import com.example.gui_app_streaming.databinding.ActivityInformacionBinding
 import com.example.gui_app_streaming.databinding.ActivityRegistroBinding
 
@@ -18,7 +20,7 @@ class Informacion : AppCompatActivity() {
         binding.escribirtelefono.isGone=true
         binding.botonCorreo.isChecked = true
         binding.masInformacion.isGone=false
-        binding.informacionExtra.isGone=true
+        binding.informacionExtra.isInvisible = true
 
         binding.iniciar.setOnClickListener{
             val intent = Intent(this, MainActivity::class.java)
@@ -44,7 +46,7 @@ class Informacion : AppCompatActivity() {
 
         binding.masInformacion.setOnClickListener{
             binding.masInformacion.isGone=true
-            binding.informacionExtra.isGone=false
+            binding.informacionExtra.isVisible=true
         }
     }
 }
