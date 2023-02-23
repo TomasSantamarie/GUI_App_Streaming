@@ -40,7 +40,9 @@ class MainActivity : AppCompatActivity() {
             binding.texto.isVisible = true
         }
         binding.subscribirse.setOnClickListener{
-
+            val intent = Intent(this, Suscribirse::class.java)
+            startActivity(intent)
         }
+
     }
 }
