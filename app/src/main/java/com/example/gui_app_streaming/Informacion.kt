@@ -7,7 +7,6 @@ import androidx.core.view.isGone
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import com.example.gui_app_streaming.databinding.ActivityInformacionBinding
-import com.example.gui_app_streaming.databinding.ActivityRegistroBinding
 
 class Informacion : AppCompatActivity() {
     private lateinit var binding: ActivityInformacionBinding
@@ -22,8 +21,10 @@ class Informacion : AppCompatActivity() {
         binding.masInformacion.isGone=false
         binding.informacionExtra.isInvisible = true
 
+
+        // setOnClickListener hace referencia a cuando el usuario clica sobre el elemento tu puedas hacer que se desencadene determinadas acciones
         binding.iniciar.setOnClickListener{
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, Login::class.java)
             startActivity(intent)
         }
         binding.botonCorreo.setOnClickListener{

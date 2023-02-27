@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".MainActivity">
+    tools:context=".Login">
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
@@ -34,34 +34,92 @@
                 android:textColor="@color/white"
                 android:textSize="24sp" />
 
-            <EditText
-                android:id="@+id/editTextTextPersonName"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="match_parent"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/edittext_fondo_redondeado"
-                android:ems="10"
-                android:hint="Correo electrónico o número de teléfono"
-                android:inputType="textPersonName"
-                android:paddingStart="20dp"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white" />
+                android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/editTextTextPassword"
+                <EditText
+                    android:id="@+id/correo"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/edittext_fondo_redondeado"
+                    android:ems="10"
+                    android:hint="Correo electrónico o número de teléfono"
+                    android:inputType="textPersonName"
+                    android:paddingStart="20dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+                <LinearLayout
+                    android:id="@+id/contenedor"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ProgressBar
+                        android:id="@+id/bar1"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/orange"
+                        android:backgroundTint="@color/orange" />
+
+                    <TextView
+                        android:id="@+id/aviso1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="Escribe un número de teléfono o un correo válidos"
+                        android:textColor="@color/orange" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="match_parent"
                 android:layout_marginBottom="30dp"
-                android:background="@drawable/edittext_fondo_redondeado"
-                android:ems="10"
-                android:hint="Contraseña"
-                android:inputType="textPassword"
-                android:paddingStart="20dp"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white" />
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/contrasena1"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/edittext_fondo_redondeado"
+                    android:ems="10"
+                    android:hint="Contraseña"
+                    android:inputType="textPassword"
+                    android:paddingStart="20dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+                <LinearLayout
+                    android:id="@+id/contenedor2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ProgressBar
+                        android:id="@+id/bar2"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/orange"
+                        android:backgroundTint="@color/orange" />
+
+                    <TextView
+                        android:id="@+id/aviso2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="La contraseña debe tener entre 4 y 60 caracteres"
+                        android:textColor="@color/orange" />
+                </LinearLayout>
+            </LinearLayout>
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/registrar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
@@ -100,7 +158,7 @@
                         android:layout_marginStart="150dp"
                         android:layout_marginTop="5dp"
                         android:text="¿Necesitas ayuda?"
-                        android:textColor="@color/grey_palabras"
+                        android:textColor="@color/white"
                         android:textSize="12sp" />
                 </TableRow>
             </LinearLayout>

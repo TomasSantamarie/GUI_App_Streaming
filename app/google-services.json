@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "474303025068",
+    "project_id": "guiappstreaming",
+    "storage_bucket": "guiappstreaming.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:474303025068:android:bb8f98ea2ee9be6b557409",
+        "android_client_info": {
+          "package_name": "com.example.gui_app_streaming"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "474303025068-eago727dhfna98bmvci048qpfkp08hbk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2CZxGXdQD2PUNydZycRGta-mTSanPO2g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "474303025068-eago727dhfna98bmvci048qpfkp08hbk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

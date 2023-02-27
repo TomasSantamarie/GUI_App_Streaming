@@ -3,8 +3,9 @@ package com.example.gui_app_streaming
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import androidx.core.view.isGone
-import com.example.gui_app_streaming.databinding.ActivityRegistroBinding
 import com.example.gui_app_streaming.databinding.ActivitySuscribirseBinding
 
 class Suscribirse : AppCompatActivity() {
@@ -14,6 +15,8 @@ class Suscribirse : AppCompatActivity() {
         binding = ActivitySuscribirseBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        // para desaparecer en un principio elementos que no querramos que el usuario pueda ver
+        binding.contenedor2.isGone=true
         binding.textAparecer1.isGone= true
         binding.textAparecer2.isGone= true
         binding.textAparecer3.isGone= true
@@ -22,9 +25,33 @@ class Suscribirse : AppCompatActivity() {
         binding.textAparecer6.isGone= true
         binding.textAparecer7.isGone= true
 
+        var email = ""
         binding.sesion.setOnClickListener{
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, Login::class.java)
             startActivity(intent)
+        }
+
+        //Esto lo que hace es que cuando el usuario interactua con dicho editText este quede guardado en una variable llamada email
+        binding.correo2.addTextChangedListener( object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+                email=binding.correo2.text.toString()
+            }
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {} })
+
+        // setOnClickListener hace referencia a cuando el usuario clica sobre el elemento tu puedas hacer que se desencadene determinadas acciones
+        binding.empezar.setOnClickListener {
+            // prevención de errores
+            if (binding.correo2.text.isNullOrEmpty() || !binding.correo2.text.toString().contains("@gmail")) {
+                binding.contenedor2.isGone = false
+            }
+            else {
+
+                val intent = Intent(this, Registro::class.java).apply {
+                    putExtra("email", email)
+                }
+                startActivity(intent)
+            }
         }
 
         binding.button2.setOnClickListener{
@@ -103,6 +130,9 @@ class Suscribirse : AppCompatActivity() {
                 binding.textAparecer7.isGone = true
                 binding.button8.text ="+"
             }
+
         }
+
+
     }
 }

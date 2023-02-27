@@ -44,7 +44,7 @@
                             android:background="@drawable/logo" />
 
                         <TextView
-                            android:id="@+id/textView20"
+                            android:id="@+id/aux"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -91,28 +91,57 @@
                         android:text="¿Quieres ver algo ya? Escribe tu dirección de correo para crear una suscripción a Netflix o reactivarla."
                         android:textColor="@color/white" />
 
-                    <EditText
-                        android:id="@+id/editTextTextPersonName4"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:background="@drawable/boton_redondeado"
-                        android:ems="10"
-                        android:hint="Dirección de correo"
-                        android:inputType="textPersonName"
-                        android:paddingLeft="10dp"
-                        android:paddingTop="10dp"
-                        android:paddingBottom="10dp"
-                        android:textSize="14sp" />
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/correo2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:ems="10"
+                            android:hint="Dirección de correo"
+                            android:inputType="textPersonName"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textSize="14sp" />
+
+                        <LinearLayout
+                            android:id="@+id/contenedor2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ProgressBar
+                                android:id="@+id/bar"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/orange"
+                                android:backgroundTint="@color/orange" />
+
+                            <TextView
+                                android:id="@+id/aviso2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="La dirección de correo es obligatorio"
+                                android:textColor="@color/orange" />
+                        </LinearLayout>
+                    </LinearLayout>
 
                     <TextView
-                        android:id="@+id/textView32"
+                        android:id="@+id/empezar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="130dp"
+                        android:layout_marginTop="10dp"
                         android:background="@color/red"
                         android:padding="10dp"
-                        android:text="Empezar >"
+                        android:text="Empezar  >"
                         android:textColor="@color/white" />
 
                 </LinearLayout>
